@@ -1,0 +1,40 @@
+﻿@using Microsoft.JSInterop
+@using GoogleCharts.Blazor.Lib.Models
+@inject IJSRuntime JsRuntime
+
+@if (ErrorMessage != "")
+{
+    <div style="max-width: 500px">
+        <h4>Ooops! Something went wrong...</h4>
+        <p style="color: red;">"@ErrorMessage"</p>
+        <hr />
+        <p>Want to leave feedback? Click here!</p>
+    </div>
+}
+else
+{
+    <div id="@Configuration.Id"></div>
+}
+
+
+@functions
+{
+    [Parameter]
+    public OrgChartConfiguration Configuration { get; set; }
+
+    private string ErrorMessage = "";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var result = await JsRuntime.InvokeAsync<string>("drawOrgChart", Configuration);
+            if (result != "")
+            {
+                ErrorMessage = result;
+            }
+            StateHasChanged();
+        }
+    }
+
+}

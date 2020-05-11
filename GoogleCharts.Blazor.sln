@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCharts.Blazor", "GoogleCharts.Blazor\GoogleCharts.Blazor.csproj", "{13F6CCDB-7059-4C9E-B574-B1B76DA37D02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleCharts.Blazor.Lib", "GoogleCharts.Blazor.Lib\GoogleCharts.Blazor.Lib.csproj", "{0447399A-7919-40C6-8F17-CE09F7DB4201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13F6CCDB-7059-4C9E-B574-B1B76DA37D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F6CCDB-7059-4C9E-B574-B1B76DA37D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F6CCDB-7059-4C9E-B574-B1B76DA37D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F6CCDB-7059-4C9E-B574-B1B76DA37D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0447399A-7919-40C6-8F17-CE09F7DB4201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0447399A-7919-40C6-8F17-CE09F7DB4201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0447399A-7919-40C6-8F17-CE09F7DB4201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0447399A-7919-40C6-8F17-CE09F7DB4201}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BAA8081-E0AC-40DE-BE1E-3C1E44C58970}
+	EndGlobalSection
+EndGlobal

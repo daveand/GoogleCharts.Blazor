@@ -1,0 +1,42 @@
+﻿@page "/"
+@inject IJSRuntime JsRuntime
+@using GoogleCharts.Blazor.Lib
+@using GoogleCharts.Blazor.Lib.Models
+
+
+@*<OrgChart Configuration="_orgChartConfiguration" />*@
+<LineChart Configuration="_lineChartConfiguration" />
+
+
+
+@functions
+{
+    OrgChartConfiguration _orgChartConfiguration;
+    LineChartConfiguration _lineChartConfiguration;
+
+
+    private List<Hierarchy> Data;
+
+    protected override void OnInitialized()
+    {
+        var hierarchies = new Hierarchies();
+        Data = hierarchies.data;
+
+
+        _orgChartConfiguration = new OrgChartConfiguration
+        {
+            Id = "orgChart",
+            Data = Data
+        };
+
+        _lineChartConfiguration = new LineChartConfiguration
+        {
+            Id = "lineChart",
+        };
+
+
+
+    }
+
+
+}
