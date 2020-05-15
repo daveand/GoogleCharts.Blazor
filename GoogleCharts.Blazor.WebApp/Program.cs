@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace GoogleCharts.Blazor
+namespace GoogleCharts.Blazor.WebApp
 {
     public class Program
     {

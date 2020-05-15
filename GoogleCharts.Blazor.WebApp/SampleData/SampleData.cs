@@ -1,11 +1,10 @@
-﻿using GoogleCharts.Blazor.Lib;
-using GoogleCharts.Blazor.Lib.Models;
+﻿using GoogleCharts.Blazor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GoogleCharts.Blazor
+namespace GoogleCharts.Blazor.WebApp
 {
     public class SampleData
     {

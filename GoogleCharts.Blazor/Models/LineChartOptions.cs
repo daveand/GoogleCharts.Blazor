@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GoogleCharts.Blazor.Lib.Models
+namespace GoogleCharts.Blazor
 {
     public class LineChartOptions
     {

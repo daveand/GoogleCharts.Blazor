@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace GoogleCharts.Blazor
+namespace GoogleCharts.Blazor.WebApp
 {
     public class Startup
     {

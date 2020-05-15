@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace GoogleCharts.Blazor.Lib.Models
+namespace GoogleCharts.Blazor
 {
     public class LineChartConfiguration
     {

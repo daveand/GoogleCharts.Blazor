@@ -1,5 +1,5 @@
 ﻿@using Microsoft.JSInterop
-@using GoogleCharts.Blazor.Lib.Models
+@using GoogleCharts.Blazor
 @inject IJSRuntime JsRuntime
 
 @if (ErrorMessage != "")
@@ -20,7 +20,7 @@ else
 @functions
 {
     [Parameter]
-    public OrgChartConfiguration Configuration { get; set; }
+    public LineChartConfiguration Configuration { get; set; }
 
     private string ErrorMessage = "";
 
@@ -28,7 +28,7 @@ else
     {
         if (firstRender)
         {
-            var result = await JsRuntime.InvokeAsync<string>("drawOrgChart", Configuration);
+            var result = await JsRuntime.InvokeAsync<string>("drawLineChart", Configuration);
             if (result != "")
             {
                 ErrorMessage = result;
