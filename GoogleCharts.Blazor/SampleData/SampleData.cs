@@ -1,14 +1,15 @@
 ﻿using GoogleCharts.Blazor.Lib;
+using GoogleCharts.Blazor.Lib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GoogleCharts.Blazor.SampleData
+namespace GoogleCharts.Blazor
 {
-    public class Hierarchies
+    public class SampleData
     {
-        public List<Hierarchy> data
+        public List<Hierarchy> hierarchyData
         {
             get
             {
@@ -26,5 +27,29 @@ namespace GoogleCharts.Blazor.SampleData
             }
         }
 
+        public List<LineSampleData> lineChartData
+        {
+            get
+            {
+                return new List<LineSampleData>
+                {
+                    new LineSampleData { Date = 1, Income = 1000, Tax = 200, Cost = 500 },
+                    new LineSampleData { Date = 2, Income = 1200, Tax = 300, Cost = 600 },
+                    new LineSampleData { Date = 3, Income = 1300, Tax = 340, Cost = 0 },
+                    new LineSampleData { Date = 4, Income = 1200, Tax = 280, Cost = 300 },
+                    new LineSampleData { Date = 5, Income = 1500, Tax = 450, Cost = 250 },
+                };
+            }
+        }
+
+
+    }
+
+    public class LineSampleData
+    {
+        public double Date { get; set; }
+        public double Income { get; set; }
+        public double Tax { get; set; }
+        public double Cost { get; set; }
     }
 }

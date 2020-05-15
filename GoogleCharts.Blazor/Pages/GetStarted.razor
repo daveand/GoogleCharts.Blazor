@@ -1,0 +1,63 @@
+﻿@page "/getstarted"
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col col-12 col-sm-12">
+                <h3>Get Started</h3>
+                <hr />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col col-12 col-sm-4">
+                <h5>1. Install nuget package</h5>
+                <p>Or install from nuget package manager</p>
+            </div>
+            <div class="col col-12 col-sm-8">
+                <code class="code-wrapper">
+                    <pre>
+
+    Install-Package GoogleCharts.Blazor
+                </pre>
+                </code>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12 col-sm-4">
+                <h5>2. Include source files</h5>
+                <p>Include this in "_Host.cshtml"</p>
+            </div>
+            <div class="col col-12 col-sm-8">
+                <code class="code-wrapper">
+                    <pre>
+
+    &lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="_content/GoogleCharts.Blazor/gcharts-blazor.js"&gt;&lt;/script&gt;
+                </pre>
+                </code>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-sm-4">
+                <h5>3. Import usings</h5>
+                <p>Add following using statement in "_Imports.razor"</p>
+            </div>
+            <div class="col col-12 col-sm-8">
+                <code class="code-wrapper">
+                    <pre>
+
+    @@using GoogleCharts.Blazor
+                </pre>
+                </code>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+@code {
+
+}

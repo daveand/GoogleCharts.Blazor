@@ -4,8 +4,24 @@
 @using GoogleCharts.Blazor.Lib.Models
 
 
-@*<OrgChart Configuration="_orgChartConfiguration" />*@
+
+@*<OrgChart Configuration="_orgChartConfiguration" />
 <LineChart Configuration="_lineChartConfiguration" />
+
+<code class="code-wrapper">
+    <pre>
+
+    var options = new
+    {
+        title = "Hello chart...",
+        height = 600,
+        hAxis = new { title = "Yearssss"},
+        vAxis = new { title = "Amountzzz"}
+    };
+    </pre>
+</code>
+
+<Button Color="Color.Primary">Click me</Button>*@
 
 
 @functions
@@ -15,11 +31,13 @@
 
 
     private List<Hierarchy> Data;
+    private List<LineSampleData> LineSampleData;
 
     protected override void OnInitialized()
     {
-        var hierarchies = new Hierarchies();
-        Data = hierarchies.data;
+        var sampleData = new SampleData();
+        Data = sampleData.hierarchyData;
+        LineSampleData = sampleData.lineChartData;
 
 
         _orgChartConfiguration = new OrgChartConfiguration
@@ -28,11 +46,31 @@
             Data = Data
         };
 
+        var lineChartColumns = new List<object[]>
+    {
+            new object[] {"number", "X"},
+            new object[] {"number", "Income"},
+            new object[] {"number", "Taxes"},
+            new object[] {"number", "Cost"}
+        };
+
+        var lineChartData = LineSampleData.Select(d => new object[] { d.Date, d.Income, d.Tax, d.Cost });
+
+        var options = new
+        {
+            title = "Hello chart...",
+            height = 600,
+            hAxis = new { title = "Yearssss"},
+            vAxis = new { title = "Amountzzz"}
+        };
+
         _lineChartConfiguration = new LineChartConfiguration
         {
             Id = "lineChart",
+            Columns = lineChartColumns,
+            Data = lineChartData,
+            Options = options
         };
-
 
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace GoogleCharts.Blazor.Lib.Models
@@ -7,7 +8,9 @@ namespace GoogleCharts.Blazor.Lib.Models
     public class LineChartConfiguration
     {
         public string Id { get; set; }
-        public List<Hierarchy> Data { get; set; }
+        public IEnumerable<object[]> Columns { get; set; }
+        public IEnumerable<object[]> Data { get; set; }
+        public object Options { get; set; }
 
     }
 }

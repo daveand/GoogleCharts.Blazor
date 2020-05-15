@@ -4,6 +4,12 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+code pre {
+    font-size: 14px;
+    background-color: rgb(230, 230, 230);
+    border-left: 4px solid steelblue;
+}
+
 a, .btn-link {
     color: #0366d6;
 }
@@ -136,6 +142,24 @@ app {
     top: 0.5rem;
 }
 
+.nav-header {
+    margin-top: 20px;
+    height: 100px;
+}
+
+.content-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p {
+    color: gray;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -151,6 +175,12 @@ app {
 }
 
 @media (min-width: 768px) {
+
+    .layout-width {
+        margin: auto;
+        max-width: 70%;
+    }
+
     app {
         flex-direction: row;
     }
